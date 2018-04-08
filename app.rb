@@ -3,8 +3,12 @@
 require 'aws-sdk'
 require 'benchmark'
 
-ITERATIONS = 200
-PUBLISHER_THREADS = 3
+puts "How many messages do you want to send through Kinesis? [300]"
+iterations = gets.to_i
+iterations = 300 if iterations.zero?
+puts "How many threads do you want to run at once? [13]"
+publisher_thread_count = gets.to_i
+publisher_thread_count = 13 if publisher_thread_count.zero?
 
 class KinesisTest
 
@@ -101,4 +105,4 @@ class KinesisTest
   end
 end
 
-KinesisTest.new(ITERATIONS, PUBLISHER_THREADS).run
+KinesisTest.new(iterations, publisher_threads).run
