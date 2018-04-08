@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-#require 'aws-sdk'
+
+require 'aws-sdk'
 require 'benchmark'
 
 ITERATIONS = 200
