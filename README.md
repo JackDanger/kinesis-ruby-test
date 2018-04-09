@@ -24,4 +24,4 @@ You should see something like the following:
 
 This is from my laptop on my home network connection in SF. With 17 threads this script published about 142 QPS.
 
-It appears a single thread can publish at best 16 QPS (when not starved for IO and scheduling). But even at 73 concorrent threads each one managed 4QPS. That seems like a reasonable range for calculating possible throughput per process per shard.
+It appears a single thread can publish at best 16 QPS (when not starved for IO and scheduling). But even at 73 concurrent threads each one managed 4QPS. That seems like a reasonable range for calculating possible throughput per process per shard.
